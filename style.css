@@ -1,22 +1,23 @@
 body {
   font-family: 'Comic Sans MS', cursive;
-  background: linear-gradient(#cceeff, #ffffff);
+  background: url('img/background1.jpg') no-repeat center center fixed;
+  background-size: cover;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 .map-container {
   position: relative;
   width: 90%;
   margin: auto;
-  padding: 20px;
+  padding: 50px 0;
 }
 
 .path {
   display: flex;
   justify-content: space-between;
-  background: #a7d7a9;
-  padding: 20px;
-  border-radius: 20px;
+  margin-top: 200px; /* tempat karakter jalan */
 }
 
 .point {
@@ -36,19 +37,27 @@ body {
 
 .character {
   position: absolute;
-  top: -30px;
+  top: 100px;
   left: 0;
-  font-size: 40px;
-  transition: left 0.5s;
+  width: 60px;
+  height: 60px;
+  background: url('img/karakter_gadis.png') no-repeat center center;
+  background-size: contain;
+  transition: left 0.7s;
+  z-index: 10;
 }
 
 .dialog-box {
-  background: white;
+  background: url('img/balon.png') no-repeat center center;
+  background-size: contain;
   border-radius: 20px;
-  padding: 15px;
+  padding: 30px 20px 20px 20px;
   margin: 20px auto;
   width: 80%;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  min-height: 80px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  color: #000;
+  font-weight: bold;
 }
 
 button {
