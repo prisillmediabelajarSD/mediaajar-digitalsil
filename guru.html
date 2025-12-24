@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mode Guru - Media Belajar</title>
+</head>
+<body>
+<h1>Mode Guru — Buat Misi Interaktif</h1>
+
+<label>Judul Misi:</label><br>
+<input id="judul" placeholder="Misi Akibatnya Apa Ya?" style="width:90%"><br><br>
+
+<label>Mulai Misi (teks/kalimat/video link):</label><br>
+<textarea id="awal" placeholder="Perhatikan video atau gambar dari guru" style="width:90%;height:60px"></textarea><br><br>
+
+<label>Tugas Kelompok:</label><br>
+<textarea id="tugas" placeholder="Diskusikan bersama kelompokmu..." style="width:90%;height:60px"></textarea><br><br>
+
+<label>Kartu Petunjuk (pisahkan dengan enter):</label><br>
+<textarea id="kartu" placeholder="Makhluk hidup di sekitar\nKesehatan manusia\nKegiatan sekolah" style="width:90%;height:60px"></textarea><br><br>
+
+<label>Refleksi:</label><br>
+<textarea id="refleksi" placeholder="Apa dampak yang paling membuatmu berpikir?" style="width:90%;height:60px"></textarea><br><br>
+
+<button onclick="simpan()">SIMPAN</button>
+
+<p>Link Siswa:</p>
+<a href="main.html" target="_blank">Buka Game Siswa</a>
+
+<script>
+function simpan(){
+  localStorage.setItem("judul", document.getElementById("judul").value);
+  localStorage.setItem("awal", document.getElementById("awal").value);
+  localStorage.setItem("tugas", document.getElementById("tugas").value);
+  localStorage.setItem("kartu", document.getElementById("kartu").value);
+  localStorage.setItem("refleksi", document.getElementById("refleksi").value);
+  alert("Materi tersimpan!");
+}
+</script>
+
+</body>
+</html>
